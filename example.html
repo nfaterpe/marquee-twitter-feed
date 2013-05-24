@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Scrolling news example</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <h1>Horizontal scrolling twitter marquee feed</h1>
+
+	<div class="feed">
+		<script src="js/libs/chirp.min.js"></script>
+		<script>Chirp({
+	      user:'gomako',
+	      max:10,
+	      templates: {
+	      	base: '<marquee behavior="scroll" scrollamount="1" direction="left" width="100%">{{tweets}}</marquee>',
+	      	tweet: '<span><a href="http://twitter.com/{{user.screen_name}}" title="{{user.name}} — {{user.description}}"></a>{{html}}</span>'
+	      }
+	    })</script>
+	</div>
+
+	<!-- jQuery Scripts -->
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.marquee.js"></script>
+	<script>
+		$(function(){
+			 $('marquee').marquee()
+		});
+	</script>
+
+	<p>
+		<a href="http://github.com/github">goMako on GitHub</a>
+	</p>
+	
+</body>
+</html>
